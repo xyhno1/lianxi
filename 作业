@@ -1,0 +1,17 @@
+自然语言描述事件：
+①As a ParkShare, I want to share one parking spot to more than one motorist at a different time so that motorists can make parking easy.
+②As a parking spot owner, I want to register my spare parking spots.
+③As a parking spot owner, I want to register proposed price and service time.
+④As a driver, I want to bid one appropriate space that meets my need.
+⑤As a commercial car park or public car parks, I want to sell or rent my parking spots
+⑥As a ParkShare system, I want to allow peer-to-peer transactions between individuals’needs and services.
+⑦As a ParkShare system, I want to provide adequate parking.
+
+EARS描述：
+①While a parking spot is empty,the ParkShare system shall share the parking spot to more than one motorist at a different time.
+②The parking spot owner shall register his spare parking spots.
+③While a parking spot is empty,the parking spot owner shall register proposed price and service time.
+④When a car need to park the driver shall bid one appropriate space .
+⑤While the parking spots is empty,the commercial car park or public car parks shall sell or rent its parking spots.
+⑥The ParkShare system shall allow peer-to-peer transactions between individuals’needs and services.
+⑦The ParkShare system shall provide adequate parking.
