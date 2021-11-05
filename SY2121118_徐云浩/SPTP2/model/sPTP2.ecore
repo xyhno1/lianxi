@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sPTP2" nsURI="http://www.example.org/sPTP2" nsPrefix="sPTP2">
+  <eClassifiers xsi:type="ecore:EClass" name="RealizationModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//ResourceUsageModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CausalityModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="b" eType="#//DynamicUsageModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="d" eType="#//CoreResourceModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceManagement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="f" eType="#//CoreResourceModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="h" eType="#//ResourceTypes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoreResourceModel"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="g" eType="#//CoreResourceModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceUsageModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//CoreResourceModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicUsageModel" eSuperTypes="#//ResourceUsageModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="c" eType="#//CausalityModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StaticUsageModel" eSuperTypes="#//ResourceUsageModel"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Descriptor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//Instance"
+        eOpposite="#//Instance/type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QoScharacteristic">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" upperBound="-1"
+        eType="#//ResourceService" eOpposite="#//ResourceService/null3"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//Resource"
+        eOpposite="#//Resource/offerredQoS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instance" upperBound="-1"
+        eType="#//QoSvalue" eOpposite="#//QoSvalue/type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" upperBound="-1"
+        eType="#//Descriptor" eOpposite="#//Descriptor/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QoSvalue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//ResourceServiceInstance"
+        eOpposite="#//ResourceServiceInstance/offerredQoS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//QoScharacteristic"
+        eOpposite="#//QoScharacteristic/instance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceService">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null3" upperBound="-1"
+        eType="#//QoScharacteristic" eOpposite="#//QoScharacteristic/null2"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instance" upperBound="-1"
+        eType="#//ResourceServiceInstance" eOpposite="#//ResourceServiceInstance/type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//Descriptor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offerredService" lowerBound="1"
+        upperBound="-1" eType="#//ResourceService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offerredQoS" upperBound="-1"
+        eType="#//QoScharacteristic" eOpposite="#//QoScharacteristic/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceServiceInstance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offerredQoS" upperBound="-1"
+        eType="#//QoSvalue" eOpposite="#//QoSvalue/null"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//ResourceService"
+        eOpposite="#//ResourceService/instance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventOccurence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Scenario">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cause" lowerBound="1" eType="#//StimulusReception"
+        eOpposite="#//StimulusReception/effect"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="effect" upperBound="-1"
+        eType="#//StimulusGeneration" eOpposite="#//StimulusGeneration/cause"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executionHost" lowerBound="1"
+        upperBound="-1" eType="#//Instance.1" eOpposite="#//Instance.1/methodExecution"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="end" lowerBound="1" eType="#//ScenarioEndEvent"
+        eOpposite="#//ScenarioEndEvent/null"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="start" lowerBound="1" eType="#//ScenarioStartEvent"
+        eOpposite="#//ScenarioStartEvent/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stimulus">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cause" lowerBound="1" eType="#//StimulusGeneration"
+        eOpposite="#//StimulusGeneration/effect"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" eType="#//Instance.1"
+        eOpposite="#//Instance.1/null"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="effect" eType="#//StimulusReception"
+        eOpposite="#//StimulusReception/cause"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodExecution" upperBound="-1"
+        eType="#//Scenario" eOpposite="#//Scenario/executionHost"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//Stimulus"
+        eOpposite="#//Stimulus/receiver"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StimulusGeneration" eSuperTypes="#//EventOccurence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cause" lowerBound="1" eType="#//Scenario"
+        eOpposite="#//Scenario/effect"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="effect" lowerBound="1"
+        upperBound="-1" eType="#//Stimulus" eOpposite="#//Stimulus/cause"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StimulusReception" eSuperTypes="#//EventOccurence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="effect" upperBound="-1"
+        eType="#//Scenario" eOpposite="#//Scenario/cause"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cause" lowerBound="1" eType="#//Stimulus"
+        eOpposite="#//Stimulus/effect"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScenarioEndEvent" eSuperTypes="#//EventOccurence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" eType="#//Scenario"
+        eOpposite="#//Scenario/end"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ScenarioStartEvent" eSuperTypes="#//EventOccurence">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" eType="#//Scenario"
+        eOpposite="#//Scenario/start"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UsageDemand" eSuperTypes="#//EventOccurence.1">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" eType="#//AnalysisContext"
+        eOpposite="#//AnalysisContext/null"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" lowerBound="1" eType="#//ResourceUsage"
+        eOpposite="#//ResourceUsage/workload"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceUsage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workload" lowerBound="1"
+        upperBound="-1" eType="#//UsageDemand" eOpposite="#//UsageDemand/null2"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" upperBound="-1"
+        eType="#//AnalysisContext" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedResources" lowerBound="1"
+        upperBound="-1" eType="#//ResourceInstance" eOpposite="#//ResourceInstance/null2"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" upperBound="-1"
+        eType="#//ResourceServiceInstance.1" eOpposite="#//ResourceServiceInstance.1/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnalysisContext">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" upperBound="-1"
+        eType="#//UsageDemand" eOpposite="#//UsageDemand/null"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" lowerBound="1" upperBound="-1"
+        eType="#//ResourceInstance" eOpposite="#//ResourceInstance/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StaticUsage" eSuperTypes="#//ResourceUsage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicUsage" eSuperTypes="#//ResourceUsage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventOccurence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceInstance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//AnalysisContext"
+        eOpposite="#//AnalysisContext/null2"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" upperBound="-1"
+        eType="#//ResourceUsage" eOpposite="#//ResourceUsage/usedResources"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null3" lowerBound="1" upperBound="-1"
+        eType="#//ResourceServiceInstance.1" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceServiceInstance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//ResourceUsage"
+        eOpposite="#//ResourceUsage/null2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Client" eSuperTypes="#//StaticUsage.1 #//Instance.2">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedResources" lowerBound="1"
+        upperBound="-1" eType="#//ResourceServiceInstance.2" eOpposite="#//ResourceServiceInstance.2/null"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredQoS" lowerBound="1"
+        upperBound="-1" eType="#//QoSvalue.1" eOpposite="#//QoSvalue.1/client"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedResources2" lowerBound="1"
+        upperBound="-1" eType="#//ResourceInstance.3" eOpposite="#//ResourceInstance.3/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StaticUsage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Instance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceServiceInstance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//Client"
+        eOpposite="#//Client/usedResources"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QoSvalue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" upperBound="-1"
+        eType="#//Client" eOpposite="#//Client/requiredQoS"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//ActionExecution"
+        eOpposite="#//ActionExecution/requiredQoS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionExecution" eSuperTypes="#//Scenario.1">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredQoS" upperBound="-1"
+        eType="#//QoSvalue.1" eOpposite="#//QoSvalue.1/null"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="successor" upperBound="-1"
+        eType="#//ActionExecution" eOpposite="#//ActionExecution/null"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//ActionExecution"
+        eOpposite="#//ActionExecution/successor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Scenario">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="step" lowerBound="1" upperBound="-1"
+        eType="#//ActionExecution" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceInstance" eSuperTypes="#//Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" upperBound="-1"
+        eType="#//ResourceServiceInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="offerredQoS" upperBound="-1"
+        eType="#//QoSvalue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type2" lowerBound="1" upperBound="-1"
+        eType="#//Resource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" upperBound="-1"
+        eType="#//ResourceBroker" eOpposite="#//ResourceBroker/null2"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null3" upperBound="-1"
+        eType="#//ResourceManager" eOpposite="#//ResourceManager/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProtectedResource" eSuperTypes="#//ResourceInstance.2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UnprotectedResource" eSuperTypes="#//ResourceInstance.2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActiveResource" eSuperTypes="#//ResourceInstance.2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Processor" eSuperTypes="#//ResourceInstance.2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationResource" eSuperTypes="#//ResourceInstance.2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PassiveResource" eSuperTypes="#//ResourceInstance.2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Device" eSuperTypes="#//ResourceInstance.2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AccessControlPolicy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null6" upperBound="-1"
+        eType="#//ExclusiveService" eOpposite="#//ExclusiveService/null7"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//ProtectedResource.1"
+        eOpposite="#//ProtectedResource.1/null2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExclusiveService" eSuperTypes="#//ResourceServiceInstance.2">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" upperBound="-1"
+        eType="#//AcquireService" eOpposite="#//AcquireService/null3"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null4" upperBound="-1"
+        eType="#//ReleaseService" eOpposite="#//ReleaseService/null5"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null7" lowerBound="1" eType="#//AccessControlPolicy"
+        eOpposite="#//AccessControlPolicy/null6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProtectedResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null1" lowerBound="1" upperBound="-1"
+        eType="#//ExclusiveService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" eType="#//AccessControlPolicy"
+        eOpposite="#//AccessControlPolicy/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReleaseService" eSuperTypes="#//ActionExecution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null5" lowerBound="1" eType="#//ExclusiveService"
+        eOpposite="#//ExclusiveService/null4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AcquireService" eSuperTypes="#//ActionExecution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBlocking" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null3" lowerBound="1" eType="#//ExclusiveService"
+        eOpposite="#//ExclusiveService/null2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceBroker" eSuperTypes="#//Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" upperBound="-1"
+        eType="#//AccessControlPolicy.1" eOpposite="#//AccessControlPolicy.1/null"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" lowerBound="1" upperBound="-1"
+        eType="#//ResourceInstance.1" eOpposite="#//ResourceInstance.1/null2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceControlPolicy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//ResourceManager"
+        eOpposite="#//ResourceManager/null2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceManager" eSuperTypes="#//Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" upperBound="-1"
+        eType="#//ResourceInstance.1" eOpposite="#//ResourceInstance.1/null3"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null2" lowerBound="1" eType="#//ResourceControlPolicy"
+        eOpposite="#//ResourceControlPolicy/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AccessControlPolicy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" eType="#//ResourceBroker"
+        eOpposite="#//ResourceBroker/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceInstance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" lowerBound="1" upperBound="-1"
+        eType="#//Client" eOpposite="#//Client/usedResources2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EngineeringModelElement" eSuperTypes="#//ResourceInstance.3">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realization" lowerBound="1"
+        upperBound="-1" eType="#//LogicalModelElement" eOpposite="#//LogicalModelElement/null"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalModelElement" eSuperTypes="#//Client">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="null" upperBound="-1" eType="#//EngineeringModelElement"
+        eOpposite="#//EngineeringModelElement/realization"/>
+  </eClassifiers>
+</ecore:EPackage>

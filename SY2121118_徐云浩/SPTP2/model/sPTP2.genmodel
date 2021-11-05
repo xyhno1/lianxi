@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/SPTP2/src-gen" creationIcons="false" editDirectory="/SPTP2.edit/src-gen"
+    editorDirectory="/SPTP2.editor/src-gen" modelPluginID="SPTP2" modelName="SPTP2"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>sPTP2.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="SPTP2" disposableProviderFactory="true" ecorePackage="sPTP2.ecore#/">
+    <genClasses ecoreClass="sPTP2.ecore#//RealizationModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//RealizationModel/a"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//CausalityModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//CausalityModel/b"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//CausalityModel/d"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceManagement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceManagement/f"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceManagement/h"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//CoreResourceModel"/>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceTypes">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceTypes/g"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceUsageModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceUsageModel/e"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//DynamicUsageModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//DynamicUsageModel/c"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//StaticUsageModel"/>
+    <genClasses ecoreClass="sPTP2.ecore#//Descriptor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Descriptor/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//QoScharacteristic">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//QoScharacteristic/null2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//QoScharacteristic/null"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//QoScharacteristic/instance"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//Instance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Instance/type"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//QoSvalue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//QoSvalue/null"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//QoSvalue/type"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceService/null3"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceService/instance"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//Resource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Resource/offerredService"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Resource/offerredQoS"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceServiceInstance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceServiceInstance/offerredQoS"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceServiceInstance/type"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//EventOccurence"/>
+    <genClasses ecoreClass="sPTP2.ecore#//Scenario">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Scenario/cause"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Scenario/effect"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Scenario/executionHost"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Scenario/end"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Scenario/start"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//Stimulus">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Stimulus/cause"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Stimulus/receiver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Stimulus/effect"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//Instance.1">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Instance.1/methodExecution"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Instance.1/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//StimulusGeneration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//StimulusGeneration/cause"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//StimulusGeneration/effect"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//StimulusReception">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//StimulusReception/effect"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//StimulusReception/cause"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ScenarioEndEvent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ScenarioEndEvent/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ScenarioStartEvent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ScenarioStartEvent/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//UsageDemand">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//UsageDemand/null"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//UsageDemand/null2"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceUsage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceUsage/workload"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceUsage/null"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceUsage/usedResources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceUsage/null2"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//AnalysisContext">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//AnalysisContext/null"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//AnalysisContext/null2"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//StaticUsage"/>
+    <genClasses ecoreClass="sPTP2.ecore#//DynamicUsage"/>
+    <genClasses ecoreClass="sPTP2.ecore#//EventOccurence.1"/>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceInstance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceInstance/null"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceInstance/null2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceInstance/null3"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceServiceInstance.1">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceServiceInstance.1/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//Client">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Client/usedResources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Client/requiredQoS"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Client/usedResources2"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//StaticUsage.1"/>
+    <genClasses ecoreClass="sPTP2.ecore#//Instance.2"/>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceServiceInstance.2">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceServiceInstance.2/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//QoSvalue.1">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//QoSvalue.1/client"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//QoSvalue.1/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ActionExecution">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ActionExecution/requiredQoS"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ActionExecution/successor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ActionExecution/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//Scenario.1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPTP2.ecore#//Scenario.1/step"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceInstance.1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceInstance.1/null"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceInstance.1/offerredQoS"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceInstance.1/type2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceInstance.1/null2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceInstance.1/null3"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceInstance.2"/>
+    <genClasses ecoreClass="sPTP2.ecore#//ProtectedResource"/>
+    <genClasses ecoreClass="sPTP2.ecore#//UnprotectedResource"/>
+    <genClasses ecoreClass="sPTP2.ecore#//ActiveResource"/>
+    <genClasses ecoreClass="sPTP2.ecore#//Processor"/>
+    <genClasses ecoreClass="sPTP2.ecore#//CommunicationResource"/>
+    <genClasses ecoreClass="sPTP2.ecore#//PassiveResource"/>
+    <genClasses ecoreClass="sPTP2.ecore#//Device"/>
+    <genClasses ecoreClass="sPTP2.ecore#//AccessControlPolicy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//AccessControlPolicy/null6"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//AccessControlPolicy/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ExclusiveService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ExclusiveService/null2"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ExclusiveService/null4"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ExclusiveService/null7"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ProtectedResource.1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ProtectedResource.1/null1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ProtectedResource.1/null2"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ReleaseService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ReleaseService/null5"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//AcquireService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sPTP2.ecore#//AcquireService/isBlocking"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//AcquireService/null3"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceBroker">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceBroker/null"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceBroker/null2"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceControlPolicy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceControlPolicy/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceManager">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceManager/null"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceManager/null2"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//AccessControlPolicy.1">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//AccessControlPolicy.1/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//ResourceInstance.3">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//ResourceInstance.3/null"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//EngineeringModelElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//EngineeringModelElement/realization"/>
+    </genClasses>
+    <genClasses ecoreClass="sPTP2.ecore#//LogicalModelElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sPTP2.ecore#//LogicalModelElement/null"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
