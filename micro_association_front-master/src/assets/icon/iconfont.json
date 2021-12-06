@@ -1,0 +1,58 @@
+{
+  "id": "2204885",
+  "name": "association",
+  "font_family": "iconfont",
+  "css_prefix_text": "my-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "19050761",
+      "name": "风车加载",
+      "font_class": "fengche",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "4657664",
+      "name": "人员",
+      "font_class": "renyuan",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "7164648",
+      "name": "后台管理",
+      "font_class": "houtai",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "11109462",
+      "name": "社团",
+      "font_class": "shetuan",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12331519",
+      "name": "组织管理",
+      "font_class": "guanli",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "17718554",
+      "name": "活动",
+      "font_class": "huodong",
+      "unicode": "e832",
+      "unicode_decimal": 59442
+    },
+    {
+      "icon_id": "1203690",
+      "name": "头像",
+      "font_class": "avatar",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}

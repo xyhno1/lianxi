@@ -1,0 +1,3 @@
+#!/bin/bash
+echo starting to pack vue...
+npm run build
